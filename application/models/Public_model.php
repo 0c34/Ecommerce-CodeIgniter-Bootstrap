@@ -121,10 +121,10 @@ class Public_model extends CI_Model
     {
 
         if ($big_get['category'] != '') {
-            (int) $big_get['category'];
+            $big_get['category'];
             $findInIds = array();
             $findInIds[] = $big_get['category'];
-            $query = $this->db->query('SELECT id FROM shop_categories WHERE sub_for = ' . $this->db->escape($big_get['category']));
+            $query = $this->db->query('SELECT id FROM shop_categories WHERE sub_for = ' . /*$this->db->escape(*/$big_get['category'])/*)*/;
             foreach ($query->result() as $row) {
                 $findInIds[] = $row->id;
             }
