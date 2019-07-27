@@ -135,7 +135,7 @@ class MY_Controller extends MX_Controller
             $arr['ip'] = $_SERVER['REMOTE_ADDR'];
             $arr['time'] = time();
             $arr['email'] = $_POST['subscribeEmail'];
-            if (filter_var($arr['email'], FILTER_VALIDATE_EMAIL) && !$this->session->userdata('email_added')) {
+            if (filter_var($arr['email'], FILTER_VALIDATE_EMAIL) /*&& !$this->session->userdata('email_added')*/) {
                 $this->session->set_userdata('email_added', 1);
                 $res = $this->Public_model->setSubscribe($arr);
                 $this->session->set_flashdata('emailAdded', lang('email_added'));
