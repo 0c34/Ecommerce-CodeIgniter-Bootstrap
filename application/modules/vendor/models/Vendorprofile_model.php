@@ -13,7 +13,7 @@ class Vendorprofile_model extends CI_Model
         /*$this->db->where('email', $email);
         $result = $this->db->get('vendors');
         return $result->row_array();*/
-        $sql = "SELECT * FROM vendors where email ='". $email."'";
+        $sql = "SELECT * FROM vendors where email =".$email;
         $result = $this->db->query($sql);
         return $result->row_array();
     }
