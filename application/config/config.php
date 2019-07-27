@@ -98,8 +98,8 @@ $config['admin_history'] = false;
  */
 $config['language'] = 'english';
 $config['language_abbr'] = 'en';
-$config['currency'] = 'IDR';
-$config['currencyKey'] = 'IDR';
+$config['currency'] = ' IDR';
+$config['currencyKey'] = ' IDR';
 
 /*
   |--------------------------------------------------------------------------
